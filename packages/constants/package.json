@@ -1,0 +1,6 @@
+{
+  "name": "@packages/constants",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@the-bot/api",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development bun run generate-commands-index && bun --watch src/app.ts",
+    "build": "NODE_ENV=production bun run generate-commands-index && bun run deploy-commands && bun build src/app.ts --outdir dist --target bun",
+    "start": "bun dist/app.js",
+    "deploy-commands": "bun src/scripts/deploy-commands.ts",
+    "download-danser": "bun src/scripts/download-danser.ts",
+    "generate-commands-index": "bun src/scripts/generate-commands-index.ts",
+    "test": "bun src/test.ts"
+  },
+  "dependencies": {
+    "@packages/constants": "*",
+    "discord.js": "^14.27.0",
+    "extract-zip": "^2.0.1",
+    "osu-parsers": "^4.1.7",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2"
+  }
+}
