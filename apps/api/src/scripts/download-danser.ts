@@ -1,7 +1,7 @@
 import extract from 'extract-zip'
 import { resolve } from 'node:path'
 
-const downloadLink = 'https://github.com/Wieku/danser-go/releases/download/0.12.1/danser-0.12.1-win.zip'
+const downloadLink = `https://github.com/Wieku/danser-go/releases/download/0.12.1/danser-0.12.1-${process.platform === 'win32' ? 'win' : 'linux'}.zip`
 const zipPath = 'danser.zip'
 const extractDir = 'danser'
 

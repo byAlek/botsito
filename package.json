@@ -19,7 +19,9 @@
   },
   "license": "MIT",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "dev:api": "bun -F @the-bot/api dev"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
